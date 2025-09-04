@@ -8,7 +8,7 @@
       "program": "${workspaceFolder}/target/debug/access-point",
       "args": [
         "-c",
-        "/Users/fracon/Documents/code/open-source/mcp-access-point-forked/.vscode/mcp-config/config4/config.yaml"
+        "/Users/dhruvbansal/Documents/code/open-source/mcp-access-point-forked/.vscode/mcp-config/simple-pet-config/config.yaml"
       ],
       "cwd": "${workspaceFolder}",
       "stopOnEntry": false,

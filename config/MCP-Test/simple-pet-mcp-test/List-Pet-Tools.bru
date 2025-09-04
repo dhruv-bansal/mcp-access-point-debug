@@ -1,0 +1,27 @@
+meta {
+  name: List-Pet-Tools
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://127.0.0.1:8080/api/service-1/mcp
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "method": "tools/call",
+      "params": {
+        "name": "listPets",
+        "arguments": {}
+      }
+    }
+}

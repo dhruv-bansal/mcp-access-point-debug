@@ -1,0 +1,20 @@
+meta {
+  name: GET-Tools-for-service
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://127.0.0.1:8080/api/service-1/mcp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "tools/list",
+      "params": {}
+    }
+}
