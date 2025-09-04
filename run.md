@@ -15,3 +15,6 @@ DEBUG=prism:request,prism:response prism mock /Users/dhruvbansal/Documents/code/
 
 #### Start MCP-access-point
 start using launch.config of vscode
+
+#### Test using bruno scripts
+open-source/mcp-access-point-forked/config/MCP-Test/simple-pet-mcp-test/
