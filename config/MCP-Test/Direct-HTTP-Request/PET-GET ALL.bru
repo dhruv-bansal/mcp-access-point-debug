@@ -1,0 +1,15 @@
+meta {
+  name: PET-GET ALL
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://127.0.0.1:8082/pet
+  body: json
+  auth: inherit
+}
+
+headers {
+  ~Accept: application/json
+}

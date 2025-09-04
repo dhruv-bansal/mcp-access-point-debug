@@ -1,0 +1,25 @@
+pingora:
+  version: 1
+  threads: 2
+  pid_file: /run/pingora.pid
+  upgrade_sock: /tmp/pingora_upgrade.sock
+  user: nobody
+  group: mcpusers
+
+access_point:
+  # listener on TCP or TLS
+  listeners:
+    - address: "[::]:8080"
+mcps:
+  - id: wifi-network-mcp
+    upstream_id: 1
+    path: https://api-gateway-shared.dev.hgw.yo-digital.com/hgw/ob-network-manager/dt/v3/api-docs/
+
+upstreams:
+  - id: 1
+    nodes:
+      "api-gateway-shared.dev.hgw.yo-digital.com:443": 1
+    type: roundrobin
+    scheme: https
+    pass_host: rewrite
+    upstream_host: api-gateway-shared.dev.hgw.yo-digital.com
